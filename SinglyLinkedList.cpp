@@ -24,7 +24,7 @@ class LinkedList{
         LinkedList()  {
             head=nullptr;
         }
-        
+         // to print linkedlist   
         void display()  {
             if(head==nullptr){
                 cout<<"linkedlist is empty"<<endl;
