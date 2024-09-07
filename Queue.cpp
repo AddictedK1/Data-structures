@@ -105,6 +105,7 @@ class Queue  {
 
 
 int main()  {
+    // test examples
     Queue test;
     test.pop();
     test.push(10);
