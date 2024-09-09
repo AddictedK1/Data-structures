@@ -166,6 +166,7 @@ class LinkedList{
 
 int main()  {
     // test examples
+    // for reference 
     LinkedList list;
     list.insert_first(15);
     list.insert_first(25);
@@ -186,7 +187,5 @@ int main()  {
     list.remove(2);
     list.display();
 
-    
-    
     return 0;
 }
