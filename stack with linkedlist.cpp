@@ -1,3 +1,4 @@
+// NOTE: we dont have any functionality for isFull function because it will nearly never overflow 
 #include<iostream>
 using namespace std;
 
