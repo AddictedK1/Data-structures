@@ -1,4 +1,5 @@
 // NOTE: we dont have any functionality for isFull function because it will nearly never overflow 
+// and we can also keep the track of the size variable and also without counting it everytime...
 #include<iostream>
 using namespace std;
 
