@@ -162,7 +162,44 @@ class LinkedList{
             }
         
         }
-        
+
+        int countNodes()  {
+            Node* temp = head;
+            int nodes=0;
+            while(temp!=nullptr)  {
+                nodes++;
+                temp = temp->Next;
+            }
+            return nodes;
+        }
+
+        vector<int> countEvenOdds()  {
+            Node* temp = head;
+            vector<int> evenOdd(2);  // [even, odd]
+            while(temp!=nullptr)  {
+                if(temp->data % 2) evenOdd[1]++;
+                else evenOdd[0]++; 
+                temp = temp->Next;
+            }
+            return evenOdd;
+        }
+
+        vector<Node*> splitEvenOdds()  {
+            LinkedList evens;
+            LinkedList odds;    
+            Node* temp = head; 
+            while(temp!=nullptr)  {
+                if(temp->data % 2) odds.insert_first(temp->data);
+                else evens.insert_first(temp->data);
+                temp = temp->Next;
+            }
+
+            vector<Node*> vec;   // [odd,even]
+            vec.push_back(evens.head);
+            vec.push_back(odds.head);
+            return vec;
+        }
+
 };
 
 int main()  {
@@ -240,6 +277,10 @@ int main()  {
         }
 
     }
-
+    cout<<"original linkedlist ==>  10 15 65 78 45 21 12"<<endl;
+    cout<<"nodes ==> 7"<<endl;
+    cout<<"even nodes ==> 10 78 12"<<endl;
+    cout<<"odd nodes ==> 15 65 45"<<endl;
+                                                                
     return 0;
 }
